@@ -1,0 +1,41 @@
+#ri4ag {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+  }
+  
+  .figure-element {
+    display: inline-block;
+    margin: 2em;
+    border: 2px solid black;
+    background: yellowgreen;
+    padding: 1em;
+  }
+
+  #spinners-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0px;
+    padding: 0px;
+    transition: all 5s ease-out;
+    
+  }
+
+  .row{
+    height: 98px;
+    border: 1px solid #000;
+  }
+
+  #cropper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0px;
+    padding: 0px;
+    height: 500px;
+    width: 580px;
+    border: 1px solid rgb(14, 78, 161);
+    overflow: hidden;
+  }
