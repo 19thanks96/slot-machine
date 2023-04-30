@@ -1,4 +1,4 @@
-#ri4ag {
+img#ri4ag {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -7,10 +7,7 @@
   
   .figure-element {
     display: inline-block;
-    margin: 2em;
-    border: 2px solid black;
-    background: yellowgreen;
-    padding: 1em;
+    width: 20%;
   }
 
   #spinners-container{
@@ -25,7 +22,6 @@
 
   .row{
     height: 98px;
-    border: 1px solid #000;
   }
 
   #cropper{
@@ -35,7 +31,11 @@
     margin: 0px;
     padding: 0px;
     height: 500px;
-    width: 580px;
-    border: 1px solid rgb(14, 78, 161);
+    width: 100%;
     overflow: hidden;
+  }
+
+  .row img {
+    height: 90px;
+    width: 100%;
   }

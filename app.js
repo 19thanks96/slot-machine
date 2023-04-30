@@ -1,7 +1,7 @@
 let spinnersContainer = document.querySelector('#spinners-container')
 console.log('hello');
 
-const krytilka = [ 'tr', 'sq', 'crc', 'tr', 'sq' ];
+const krytilka = [ 'nigga.jpg', 'jar.png', 'noSound.jpg', 'sound.png', 'Untitled.png', ];
 let i = 0;
 function drawRow() {
     let row = document.createElement('div')
@@ -13,7 +13,8 @@ function drawRow() {
     function drawFigure(figure) {
         const figureElement = document.createElement('div');
         figureElement.className = 'figure-element';
-        figureElement.innerHTML = figure;
+        figureElement.innerHTML = `<img src='${figure}'/>`
+        
         row.append(figureElement);
     }
 }
