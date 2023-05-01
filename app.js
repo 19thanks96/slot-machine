@@ -1,14 +1,12 @@
 let spinnersContainer = document.querySelector('#spinners-container')
-console.log('hello');
 
 const imgArray = [ 'cherry.png', 'dimond.png', 'lemon.png', 'pumpkin.png', 'seven.png', ];
-let i = 0;
+
 function drawRow() {
     let row = document.createElement('div')
-    i++;
     row.className = 'row'
-    row.id = `row-${i}`
     spinnersContainer.append(row)
+
     imgArray.forEach(drawFigure);
     function drawFigure(figure) {
         const figureElement = document.createElement('div');
@@ -46,7 +44,5 @@ function drawFiveRow() {
 }
 
 function drawRaw() {
-  const randomIndex = Math.floor(Math.random() * 4);
-  //imgArray[randomIndex] = imgArray[randomIndex + 1];
   drawRow();
 }
