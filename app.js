@@ -1,7 +1,7 @@
 let spinnersContainer = document.querySelector('#spinners-container')
 console.log('hello');
 
-const krytilka = [ 'nigga.jpg', 'jar.png', 'noSound.jpg', 'sound.png', 'Untitled.png', ];
+const imgArray = [ 'cherry.png', 'dimond.png', 'lemon.png', 'pumpkin.png', 'seven.png', ];
 let i = 0;
 function drawRow() {
     let row = document.createElement('div')
@@ -9,19 +9,16 @@ function drawRow() {
     row.className = 'row'
     row.id = `row-${i}`
     spinnersContainer.append(row)
-  krytilka.forEach(drawFigure);
+    imgArray.forEach(drawFigure);
     function drawFigure(figure) {
         const figureElement = document.createElement('div');
         figureElement.className = 'figure-element';
         figureElement.innerHTML = `<img src='${figure}'/>`
-        
         row.append(figureElement);
     }
 }
 const ri4ag = document.querySelector('#ri4ag');
 let spinnersContainerTop = 0
-
-
 
 ri4ag.addEventListener('click', krytVert);
 function krytVert() {
@@ -31,7 +28,6 @@ function krytVert() {
 }
 
 drawFiveRow()
-
 
 function drawFiveRow() {
   drawRaw();
@@ -43,6 +39,6 @@ function drawFiveRow() {
 
 function drawRaw() {
   const randomIndex = Math.floor(Math.random() * 4);
-  krytilka[randomIndex] = krytilka[randomIndex + 1];
+  //imgArray[randomIndex] = imgArray[randomIndex + 1];
   drawRow();
 }
