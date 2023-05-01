@@ -73,15 +73,14 @@ function getRandomArray() {
 }
 
 function winCombination(board) {
-  let rowResult = [true,true,true,true,true];
+  let rowResult = [true, true, true, true, true];
   let winResult = false;
   board.forEach(fiveInARow);
   
-  function fiveInARow (row,rowIndex) {
-    let getFiveInRow = true;
+  function fiveInARow (row, rowIndex) {
     row.forEach(sameInRow);
   
-    function sameInRow (imgName,imgIndex) {
+    function sameInRow (imgName) {
       if (row[0] !== imgName) {
         rowResult[rowIndex] = false;
       }
