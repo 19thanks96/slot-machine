@@ -36,13 +36,11 @@ function stopSpinning() {
 drawFiveRow()
 
 function drawFiveRow() {
-  drawRaw();
-  drawRaw();
-  drawRaw();
-  drawRaw();
-  drawRaw();
-}
-
-function drawRaw() {
+  drawRow();
+  drawRow();
+  drawRow();
+  drawRow();
   drawRow();
 }
+
+
