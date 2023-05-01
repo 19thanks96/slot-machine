@@ -2,11 +2,10 @@ let spinnersContainer = document.querySelector('#spinners-container')
 
 const imgArray = [ 'cherry.png', 'dimond.png', 'lemon.png', 'pumpkin.png', 'seven.png', ];
 
-function drawRow() {
+function drawRow(randomArray) {
     let row = document.createElement('div')
     row.className = 'row'
     spinnersContainer.append(row)
-    const randomArray = getRandomArray()
     randomArray.forEach(drawFigure);
     function drawFigure(figure) {
         const figureElement = document.createElement('div');
@@ -37,19 +36,31 @@ function stopSpinning() {
 drawFiveRow()
 
 function drawFiveRow() {
-  drawRow();
-  drawRow();
-  drawRow();
-  drawRow();
-  drawRow();
+  const randomArray0 = getRandomArray();
+  const randomArray1 = getRandomArray();
+  const randomArray2 = getRandomArray();
+  const randomArray3 = getRandomArray();
+  const randomArray4 = getRandomArray();
+
+  if (winCombination(randomArray0)) {
+    setTimeout(congratulation, spinDuration) 
+  }
+
+  drawRow(randomArray0);
+  drawRow(randomArray1);
+  drawRow(randomArray2);
+  drawRow(randomArray3);
+  drawRow(randomArray4);
 }
 
+function congratulation() {
+  alert('win')
+}
 function getRandomNumber() {
   return Math.floor(Math.random() * imgArray.length)
 }
 
 function getRandomArray() {
-  
   return [
     imgArray[getRandomNumber()],
     imgArray[getRandomNumber()],
@@ -57,4 +68,10 @@ function getRandomArray() {
     imgArray[getRandomNumber()],
     imgArray[getRandomNumber()],
   ]
+}
+
+function winCombination(randomArray0) {
+  if(randomArray0[0]===randomArray0[1] ) {
+    return true
+  }
 }
