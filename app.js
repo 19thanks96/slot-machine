@@ -20,6 +20,7 @@ let spinnersContainerTop = 0
 
 const spinDuration = 1500;
 ri4ag.addEventListener('click', spin);
+
 function spin() {
   ri4ag.src = 'lever.gif';
   setTimeout(stopSpinning, spinDuration);
