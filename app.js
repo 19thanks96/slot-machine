@@ -86,10 +86,6 @@ function winCombination(board) {
         rowResult[rowIndex] = false;
       }
     } 
-    
-    if ( getFiveInRow !== true) {
-      winResult = false
-    }
   }
 
   winResult = rowResult.some(x => x === true)  
