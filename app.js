@@ -6,8 +6,8 @@ function drawRow() {
     let row = document.createElement('div')
     row.className = 'row'
     spinnersContainer.append(row)
-
-    imgArray.forEach(drawFigure);
+    const randomArray = getRandomArray()
+    randomArray.forEach(drawFigure);
     function drawFigure(figure) {
         const figureElement = document.createElement('div');
         figureElement.className = 'figure-element';
@@ -44,4 +44,17 @@ function drawFiveRow() {
   drawRow();
 }
 
+function getRandomNumber() {
+  return Math.floor(Math.random() * imgArray.length)
+}
 
+function getRandomArray() {
+  
+  return [
+    imgArray[getRandomNumber()],
+    imgArray[getRandomNumber()],
+    imgArray[getRandomNumber()],
+    imgArray[getRandomNumber()],
+    imgArray[getRandomNumber()],
+  ]
+}
