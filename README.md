@@ -8,7 +8,7 @@ Slots Machine written with Pure Javascript
 - [x] Spin button
 - [x] Spin animation
 - [x] Randomize symbols on each spin
-- [ ] Logic for win combinations
+- [x] Logic for win combinations
 - [ ] Win screen
 - [ ] Show Player balance
 - [ ] Deduct balance on each spin
