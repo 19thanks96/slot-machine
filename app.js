@@ -20,11 +20,19 @@ function drawRow() {
 const ri4ag = document.querySelector('#ri4ag');
 let spinnersContainerTop = 0
 
-ri4ag.addEventListener('click', krytVert);
-function krytVert() {
+const spinDuration = 1500;
+ri4ag.addEventListener('click', spin);
+function spin() {
+  ri4ag.src = 'lever.gif';
+  setTimeout(stopSpinning, spinDuration);
   spinnersContainerTop -= 500;
   spinnersContainer.style.top = spinnersContainerTop + 'px';
   drawFiveRow()
+}
+
+function stopSpinning() {
+  // replace gif with png to stop spin animation
+  ri4ag.src = 'lever.png';
 }
 
 drawFiveRow()
