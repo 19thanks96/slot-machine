@@ -14,9 +14,9 @@ function drawRow(randomArray) {
         row.append(figureElement);
     }
 }
+
 const ri4ag = document.querySelector('#ri4ag');
 let spinnersContainerTop = 0
-
 const spinDuration = 1500;
 ri4ag.addEventListener('click', spin);
 
@@ -36,21 +36,23 @@ function stopSpinning() {
 drawFiveRow()
 
 function drawFiveRow() {
-  const randomArray0 = getRandomArray();
-  const randomArray1 = getRandomArray();
-  const randomArray2 = getRandomArray();
-  const randomArray3 = getRandomArray();
-  const randomArray4 = getRandomArray();
+  const board = [
+    getRandomArray(), 
+    getRandomArray(), 
+    getRandomArray(),
+    getRandomArray(),
+    getRandomArray(),
+  ]
 
-  if (winCombination(randomArray0)) {
+  if (winCombination(board[0])) {
     setTimeout(congratulation, spinDuration) 
   }
 
-  drawRow(randomArray0);
-  drawRow(randomArray1);
-  drawRow(randomArray2);
-  drawRow(randomArray3);
-  drawRow(randomArray4);
+  drawRow(board[0]);
+  drawRow(board[1]);
+  drawRow(board[2]);
+  drawRow(board[3]);
+  drawRow(board[4]);
 }
 
 function congratulation() {
@@ -70,8 +72,8 @@ function getRandomArray() {
   ]
 }
 
-function winCombination(randomArray0) {
-  if(randomArray0[0]===randomArray0[1] ) {
+function winCombination(randomArray) {
+  if (randomArray[0] === randomArray[1]) {
     return true
   }
 }
