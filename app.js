@@ -44,7 +44,7 @@ function drawFiveRow() {
     getRandomArray(),
   ]
 
-  if (winCombination(board[0])) {
+  if (winCombination(board)) {
     setTimeout(congratulation, spinDuration) 
   }
 
@@ -72,8 +72,13 @@ function getRandomArray() {
   ]
 }
 
-function winCombination(randomArray) {
-  if (randomArray[0] === randomArray[1]) {
+function winCombination(board) {
+  if (hasSameNeighbor(board[0][0], board)) {
     return true
   }
+}
+
+function hasSameNeighbor(cell, board) {
+  if (cell === board[0][1] || cell === board[1][0] || cell === board[1][1])
+  return true
 }
