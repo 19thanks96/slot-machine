@@ -73,12 +73,21 @@ function getRandomArray() {
 }
 
 function winCombination(board) {
-  if (hasSameNeighbor(board[0][0], board)) {
-    return true
+  let rowResult = [true, true, true, true, true];
+  let winResult = false;
+  board.forEach(fiveInARow);
+  
+  function fiveInARow (row, rowIndex) {
+    row.forEach(sameInRow);
+  
+    function sameInRow (imgName) {
+      if (row[0] !== imgName) {
+        rowResult[rowIndex] = false;
+      }
+    } 
   }
+
+  winResult = rowResult.some(x => x === true)  
+  return winResult;
 }
 
-function hasSameNeighbor(cell, board) {
-  if (cell === board[0][1] || cell === board[1][0] || cell === board[1][1])
-  return true
-}
